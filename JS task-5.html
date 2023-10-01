@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Task 5(21BCE9346) </title>
+  <link rel="stylesheet" href="Styles task-5.css">
+</head>
+<body>
+  <h1>Form Validation</h1>
+  <table>
+  <form id="validationForm">
+    <tr>
+      <td><label for="name">Name:</label></td>
+      <td><input class="error" type="text" id="name" required></td>
+      <td><p class="error" id="nameError"></p><br/><br/></td>
+    </tr>
+    <tr>
+      <td><label for="email">Email:</label></td>
+      <td><input class="error" type="email" id="email" required></td>
+      <td><p class="error" id="emailError"></p><br/><br/></td>
+    </tr>
+    <tr>
+      <td><label for="website">Website:</label></td>
+      <td><input class="error" type="text" id="website"></td>
+      <td><p class="error" id="websiteError"></p><br/><br/></td>
+    </tr>
+    <tr>
+      <td><label for="message">Message:</label></td>
+      <td><textarea class="error" id="message" ></textarea></td>
+      <td><p class="error" id="messageError"></p><br/><br/></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button type="button" onclick="validateForm()">Submit</button></td>
+    </tr>
+  </form>
+</table>
+  <script src="Script task-5.js"></script>
+</body>
+</html>

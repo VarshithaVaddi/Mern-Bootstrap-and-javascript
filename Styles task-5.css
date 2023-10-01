@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+  }
+  form {
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  table {
+    margin: 0 auto;
+  }
+  button {
+    background-color: #2c42c0;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -110px;
+  }
+
+  button:hover {
+    background-color: #8286d7;
+  }
+
+  .error {
+    color: red;
+    display: inline;
+  }
+  textarea{
+    height: 50px;
+  }
+
