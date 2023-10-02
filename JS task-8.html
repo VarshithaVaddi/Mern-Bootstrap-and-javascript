@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JS TASK 8(21BCE9346)</title>
-    <link rel="stylesheet" type="text/css" href="Styles task-8.css" />
+    <title>JS_Task8</title>
+    <link rel="stylesheet" href="Styles task-8.css">
   </head>
   <body>
     <h1>Registration Form</h1>
-    <form  method="post" target="_blank">
+    <form method="post" target="_blank">
       <table>
         <tr>
           <td>First Name:</td>
@@ -52,7 +52,7 @@
         </tr>
         <tr>
           <td>
-            <input type="radio" name="gender" value="female" id="female"/>
+            <input type="radio" name="gender" value="female" id="female" />
             <label for="female">Female</label>
           </td>
         </tr>
@@ -88,7 +88,7 @@
           <td>Country:</td>
           <td>
             <select name="country" required class="narrow-select">
-              <option ></option>
+              <option></option>
               <option value="USA">USA</option>
               <option value="Canada">Canada</option>
               <option value="UK">UK</option>
@@ -128,7 +128,9 @@
         <tr>
           <td colspan="2">
             <input type="checkbox" name="declaration" required />
-            <label for="declaration">I hereby declare all the given details are true</label>
+            <label for="declaration"
+              >I hereby declare all the given details are true</label
+            >
           </td>
           <td></td>
         </tr>
@@ -140,34 +142,42 @@
       </div>
       <br />
       <div>
-          <input type="submit" value="Register" id="registerBtn" />
+        <input type="submit" value="Register" id="registerBtn" />
       </div>
     </form>
     <script>
-      document.getElementById("registerBtn").addEventListener("click", function (event) {
-        const inputFields = document.querySelectorAll("input[type='text'], input[type='email'], input[type='password'], input[type='number'], input[type='tel'], select, textarea");
+      document
+        .getElementById("registerBtn")
+        .addEventListener("click", function (event) {
+          const inputFields = document.querySelectorAll(
+            "input[type='text'], input[type='email'], input[type='password'], input[type='number'], input[type='tel'], select, textarea"
+          );
 
-      inputFields.forEach(function (field) {
-       field.classList.remove("error-input");
-      });
-      document.querySelectorAll(".error").forEach(function (errorElement) {
-        errorElement.style.display = "none";
-      });
-      let hasErrors = false;
-      inputFields.forEach(function (field) {
-       if (field.value.trim() === "") {
-        hasErrors = true;
-        field.classList.add("error-input");
-        const errorMessage = field.nextElementSibling;
-        if (errorMessage && errorMessage.classList.contains("error")) {
-          errorMessage.style.display = "inline";
-        }
-       }
-      });
-      if (hasErrors) {
-       event.preventDefault();
-      }
-      });
+          inputFields.forEach(function (field) {
+            field.classList.remove("error-input");
+          });
+
+          document.querySelectorAll(".error").forEach(function (errorElement) {
+            errorElement.style.display = "none";
+          });
+
+          let hasErrors = false;
+
+          inputFields.forEach(function (field) {
+            if (field.value.trim() === "") {
+              hasErrors = true;
+              field.classList.add("error-input");
+              const errorMessage = field.nextElementSibling;
+              if (errorMessage && errorMessage.classList.contains("error")) {
+                errorMessage.style.display = "inline";
+              }
+            }
+          });
+
+          if (hasErrors) {
+            event.preventDefault();
+          }
+        });
     </script>
   </body>
 </html>
