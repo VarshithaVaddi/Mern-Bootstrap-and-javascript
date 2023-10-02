@@ -1,194 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BS TASK-5</title>
-    <style>
-        .gr {
-            background-color: rgb(232, 233, 235);
-            padding: 20px;
-            /* Decrease the width */
-            max-width: 400px;
-            margin: 0 auto; /* Center the form horizontally */
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/9f72516796.js" crossorigin="anonymous"></script>
+  <title>BS TASK 5</title>
 
-        .input-group-text {
-            margin-left: 10px;
-        }
-
-        .frm {
-            margin-top: 30px;
-        }
-
-        .lbl {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cust-width {
-            width: 10px;
-        }
-
-        .btn {
-            margin-top: 20px;
-        }
-    </style>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-          crossorigin="anonymous">
 </head>
-<body>
-    <div class="gr container">
-        <form class="frm" novalidate>
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    First Name
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
-                        <input type="text" class="form-control" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid First Name!
-                        </div>                          
-                    </div>
-                </div>
-            </div>            
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    Last Name
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
-                        <input type="text" class="form-control" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid Last Name!
-                        </div>
-                    </div>
-                </div>
+
+<body class="bg-white">
+  <h1 style="text-align: center;">Form Validation</h1>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-lg-5 m-auto bg-light py-5">
+        <form action="#" class="needs-validation" novalidate>
+          <div class="input-group has-validation mb-3">
+            <label style="width: 7em; padding-right: 1em;" for="fn" class="d-flex align-items-center">First Name</label>
+            <span class="input-group-text">
+              <i class="fa fa-user"></i>
+            </span>
+            <input name="fn" type="text" class="form-control" placeholder="First Name" required />
+            <div class="invalid-feedback">Please supply your first name</div>
+
+          </div>
+
+          <div class="input-group has-validation mb-3">
+            <label style="width: 7em; padding-right: 1em;" for="ln" class="d-flex align-items-center">Last Name</label>
+            <span class="input-group-text">
+              <i class="fa fa-user"></i>
+            </span>
+            <input required name="ln" type="text" class="form-control" placeholder="Last Name" />
+            <div class="invalid-feedback">Please supply your last name</div>
+
+          </div>
+
+          <div class="input-group has-validation mb-3">
+            <label style="width: 7em; padding-right: 1em;" for="email" class="d-flex align-items-center">E-Mail</label>
+            <span class="input-group-text">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <input required name="email" type="email" class="form-control" placeholder="E-Mail Address" />
+            <div class="invalid-feedback">Please supply your email address</div>
+
+          </div>
+
+          <div class="input-group has-validation mb-3">
+            <label style="width: 7em; padding-right: 1em;" for="phone" class="d-flex align-items-center">Phone #</label>
+            <span class="input-group-text">
+              <i class="fa-solid fa-phone"></i>            </span>
+            <input required name="phone" type="tel" class="form-control" placeholder="(91)999-999-9999" />
+            <div class="invalid-feedback">Please supply your phone number</div>
+
+          </div>
+
+          <div class="input-group has-validation mb-3">
+            <label style="width: 7em; padding-right: 1em;" for="addr" class="d-flex align-items-center">Address</label>
+            <span class="input-group-text">
+              <i class="fa-solid fa-house"></i> </span>
+            <input required name="addr" type="text" class="form-control" placeholder="Address" />
+            <div class="invalid-feedback">Please supply your street address</div>
+
+          </div>
+
+          <div class="input-group has-validation mb-3">
+            <label style="width: 7em; padding-right: 1em;" for="city" class="d-flex align-items-center">City</label>
+            <span class="input-group-text">
+              <i class="fa-solid fa-house"></i> </span>
+            <input required name="city" type="text" class="form-control" placeholder="City" />
+            <div class="invalid-feedback">Please supply your city</div>
+
+          </div>
+
+          <div class="input-group has-validation mb-3">
+            <label style="width: 7em; padding-right: 1em;" for="state" class="d-flex align-items-center">State</label>
+            <span class="input-group-text">
+              <i class="fa-solid fa-list"></i> </span>
+              <select name="state" class="form-control">
+                <option value="" disabled selected>Please select your state</option>
+                <option value="state1">Goa</option>
+                <option value="state2">Kerala</option>
+                <option value="state3">Tamilnadu</option>
+                <option value="state4">Karnataka</option>
+                <option value="state5">Assam</option>
+              </select>
+          </div>
+          <div style="display: flex;">
+            <div style="width: 7em; padding-right: 1em; display: flex;" class="align-items-center">Do you have hosting ?</div>
+            <div class="pb-2">
+              <div class="form-check">
+                <input required class="form-check-input" name="host" value="yes" type="radio" id="host-yes">
+                <label class="form-check-label" for="host-yes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input required class="form-check-input" name="host" value="no" type="radio" id="host-no">
+                <label class="form-check-label" for="host-no">No</label>
+              </div>
             </div>
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    Email
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                        <input type="email" class="form-control" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid Email!
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    Phone #
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                        <input type="tel" class="form-control" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid Phone Number!
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    Address
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-home" aria-hidden="true"></i></div>
-                        <input type="text" class="form-control" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid Address!
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    City
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-home" aria-hidden="true"></i></div>
-                        <input type="text" class="form-control" required>
-                        <div class="invalid-feedback">
-                            Please enter a valid City!
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    State
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-list" aria-hidden="true"></i></div>
-                        <select class="form-select cust-width" required>
-                            <option value="" disabled selected>Please select your State</option>
-                            <option value="1">Andhra Pradesh</option>
-                            <option value="2">Goa</option>
-                            <option value="3">Kerala</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select your State!
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-4">
-                    Do you have hosting?
-                </div>
-                <div class="col-8">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                            No
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-2 lbl">
-                    Project Description
-                </div>
-                <div class="col-10">
-                    <div class="input-group">
-                        <div class="input-group-text"><i class="fa fa-pencil" aria-hidden="true"></i></div>
-                        <textarea class="form-control" required></textarea>
-                        <div class="invalid-feedback">
-                            Please enter a valid Description!
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-warning">
-                    Send <i class="fa fa-plane" aria-hidden="true"></i>
-                </button>
-            </div>
-        </form>
+          </div>   
+          <div class="input-group mb-3 mt-3">
+            <label style="width: 7em; padding-right: 1em;" for="proj" class="text-center">Project Description</label>
+            <span class="input-group-text">
+              <i class="fa-sharp fa-solid fa-pencil"></i></span>
+            <textarea name="proj" class="form-control" cols="30" rows="2" placeholder="Project Description"></textarea>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-warning">
+                Send <i class="fa fa-plane" aria-hidden="true"></i>
+            </button>
+        </div>
+        </form>       
+      </div>
     </div>
-</body>
+  </div>
+  <script>
+
+(function () {
+      'use strict'
+
+      var forms = document.querySelectorAll('.needs-validation')
+
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
+ </body>
 </html>

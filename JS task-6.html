@@ -28,6 +28,16 @@
   </div>
   <p class="signup">Don't have an account! <a href="#">Sign up here</a></p>
   </div>
-  <script src="Script task-8.js"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var rememberMe = document.getElementById("rememberMe").checked;
+      console.log("Username: " + username);
+      console.log("Password: " + password);
+      console.log("Remember me: " + rememberMe);
+    });
+  </script>
 </body>
 </html>
